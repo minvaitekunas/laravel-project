@@ -42,7 +42,7 @@ class ProjectController extends Controller
             // dd($request->all()); die();
            $project->fill($request->all());
            $project->save();
-           return redirect()->route('projects.index');
+           return redirect()->route('project.index');
     
     }
 
@@ -91,6 +91,5 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         $project->delete();
-        return redirect()->route('project.index');
-    }
+        return redirect()->route('project.index');    }
 }
