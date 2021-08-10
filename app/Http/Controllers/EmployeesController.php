@@ -19,13 +19,13 @@ class EmployeesController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
+         * @param  \App\Models\Employees  $employees
      * @return \Illuminate\Http\Response
      */
     public function create(){
 
         $projects = \App\Models\Project::orderBy('title')->get();
-        return view('employees.create', ['projects' => $projects]);
+        return view('employees.edit', ['employee' => $employee, 'projects' => $projects]);
 
     }
 
